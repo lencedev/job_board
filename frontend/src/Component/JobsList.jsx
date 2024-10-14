@@ -1,31 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const BASE_URL = "http://localhost:5000/api/jobs";
-
-interface Post {
-  id: number;
-  title: string;
-}
 
 const JobsList = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+
+  const [blog, setBlogs] = useState(null);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response = await fetch(`${BASE_URL}/posts`);
-      const posts = (await response.json()) as Post[];
-      setPosts(posts);
-    };
-    fetchPosts();
+    fetch("http://localhost:5000/api/jobs")
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        console.log(data);
+      })
   }, []);
 
-
   return (
-    <div></div>
+    <div className='home'>
+      <p>test</p>
+    </div>
   )
 
 }
-
 
 export default JobsList;
