@@ -1,0 +1,68 @@
+@import "../mixins.scss";
+
+.container{
+
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        border-radius: 5%;
+        padding: 3%;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; 
+
+        h1{
+           @include primary-color ;
+           @include font-primary(2rem, 600);
+        }
+
+        .name, .password, .email{
+            @include font-primary(1rem, 500);
+            display : flex; 
+            align-items: center;
+            flex-direction: column;
+            width: 60%;
+             
+            label{
+             margin-top: 10%;
+            }
+            input{
+             border: none;
+             border-bottom: 1px solid black;
+             border-right: 1px solid black;
+             margin-top: 10%;
+             width : 100%;
+             @include font-primary(1rem, 500);
+
+            }
+
+         }
+
+         .checko{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            @include font-primary(1rem, 500);
+            width : 110%;
+            margin-top: 5%;
+         }
+         button{
+             margin-top: 10%;
+             width: 40%;
+             padding: 3%;
+             border: none;
+             border-radius: 5%;
+             background-color: #f2a60272;
+             @include font-primary(1rem, 500);
+
+         }
+    
+        }
+
+    }
+   
+
+    
+
