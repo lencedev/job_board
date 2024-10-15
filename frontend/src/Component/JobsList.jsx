@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import "../Styles/Components/JobsList.scss";
 
 const JobsList = () => {
@@ -15,6 +14,7 @@ const JobsList = () => {
         setBlogs(data);
       })
   }, [])
+
   return (
     <div className='container'>
       <h1>Jobs List</h1>
